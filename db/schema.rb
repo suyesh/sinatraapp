@@ -10,11 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131227170546) do
+ActiveRecord::Schema.define(version: 20131227183926) do
 
   create_table "refills", force: true do |t|
     t.integer "phone_number"
     t.integer "amount"
+  end
+
+  create_table "users", force: true do |t|
+    t.string  "f_name"
+    t.string  "l_name"
+    t.string  "email"
+    t.string  "street"
+    t.string  "city"
+    t.string  "state"
+    t.integer "zip"
+    t.integer "phone_number"
+    t.integer "refill_id"
   end
 
 end
